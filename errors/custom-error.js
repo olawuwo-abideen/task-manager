@@ -9,5 +9,5 @@ class CustomAPIError extends Error {
     return new CustomAPIError(msg, statusCode)
   }
   
-  module.exports = { createCustomError, CustomAPIError }
+  module.exports = {createCustomError, CustomAPIError}
   
