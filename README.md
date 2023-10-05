@@ -2,6 +2,9 @@
 
 A backend to task manager app
 
+## Features
+
+- **User**: User can create, get , get all , update, and delete.
 
 ## Built With:
 
@@ -11,8 +14,6 @@ A backend to task manager app
 - dotenv
 - mongoose
 - nodemon
-
-
 
 ## Installation
 
@@ -45,6 +46,12 @@ npm start
 
 ```
 
+Set up the environment variables:
+
+Create the .env file and setup the MongoDB URL.
+
+The server will start running on the specified port (default: 3000) and establish a connection to the MongoDB database.
+
 This will start the app and set it up to listen for incoming connections on port 3000. Open up your browser of choice
 and go to the url
 
@@ -55,6 +62,18 @@ http://localhost:3000
 ```
 
 to start using the app.
+
+## API Endpoints
+
+The following API endpoints are available:
+
+- BaseUrl https://localhost:3000/
+
+- `GET /api/v1/tasks` - Get all task
+- `GET /api/v1/tasks/:id` - Get a task
+- `POST /api/v1/tasks` - Create a task
+- `PATCH /api/v1/tasks` - Update a task
+- `DELETE /api/v1/tasks` - Delete a task
 
 ## 🤝 Contributing
 
