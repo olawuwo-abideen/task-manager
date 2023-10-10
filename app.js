@@ -4,7 +4,14 @@ const tasks = require('./routes/tasks');
 const connectDB = require('./db/connect');
 const notFound = require('./middleware/not-found');
 const errorHandlerMiddleware = require('./middleware/error-handler');
-var cookieParser = require('cookie-parser')
+const cookieParser = require('cookie-parser')
+const rateLimit = require('express-rate-limit')
+const helmet = require("helmet")
+
+
+
+
+// Use Helmet!
 
 
 const app = express();
@@ -15,11 +22,22 @@ app.get('/', (req, res) => {
     res.send('Welcome to My Tasks Manager Api')
 })
 
+app.use(helmet());
 app.use(cookieParser())
 app.use(notFound)
 app.use(errorHandlerMiddleware)   
 app.use('/api/v1/tasks', tasks)
 
+
+const limiter = rateLimit({
+	windowMs: 15 * 60 * 1000, 
+	limit: 100, 
+	standardHeaders: 'draft-7', 
+	legacyHeaders: false, 
+
+})
+
+app.use(limiter)
 
 
 const port = process.env.PORT || 3000;
