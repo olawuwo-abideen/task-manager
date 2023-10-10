@@ -14,7 +14,17 @@ A backend to task manager app
 - dotenv
 - mongoose
 - nodemon
+- cookie-parser
+- helmet
+- express-rate-limit
 
+  "cookie-parser": "^1.4.6",
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "": "^7.1.1",
+    "": "^7.0.0",
+    "mongoose": "^7.2.2",
+    "nodemon": "^3.0.1"
 ## Installation
 
 - clone the repository
