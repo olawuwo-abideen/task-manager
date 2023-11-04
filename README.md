@@ -1,4 +1,4 @@
- # Task Manager
+# Task Manager
 
 This Task manager will help you to keep you on track and to follow your daily routine. You can add your daily tasks and take notes for different things, also you can remove them once
 you're done with your goal.
